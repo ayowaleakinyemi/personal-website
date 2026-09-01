@@ -1,0 +1,45 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <title>Tunde's page</title>
+    </head>
+    <body>
+        <div id="title">
+            <h1>Welcome to Tunde's Page</h1>
+            <p>This is where Dreams come true.</p>
+            <button onclick="MakeDreamComeTrue()">Make dream come true</button>
+        </div>
+    </body>
+</html>
+
+<style>
+
+    body {
+        background-image: url("https://media-gadventures.global.ssl.fastly.net/media-server/dynamic/blogs/posts/daniels/2015/04/4-scottish_highlands_matt_tilghman_final.jpg");
+        background-size: cover;
+    }
+
+    h1 {color: blue;
+
+    }
+
+    button:hover {
+  background-color: lightseagreen;
+  cursor: pointer;
+  font-size: 20px;
+    }
+
+    #title {
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+</style>
+
+<script>
+    function MakeDreamComeTrue(){
+        document.body.style.background = 'url("https://i.pinimg.com/originals/5d/9e/c1/5d9ec130d94ccf8b96c883fae2e3f4ce.gif")';
+        document.getElementById("title").style.visibility = "hidden";
+    }
+</script>
