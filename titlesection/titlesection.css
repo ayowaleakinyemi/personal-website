@@ -1,16 +1,26 @@
-    h1 {color: blue;
+:root {
+  --titleSectionPrimaryColor: rgb(65, 61, 61);
+}
+    
+#title {
+   color: var(--titleSectionPrimaryColor);
+   text-align: center;
+   padding-top: 200px;
+   background-image: url('../images/football.jpg');
+   background-position: center top;
+}
 
-    }
+.title-section-button {
+  color:var(--titleSectionPrimaryColor);
+  border-radius: 5px;
+  border: solid var(--titleSectionPrimaryColor) 1px;
+  background-color: transparent;
+  padding: 15px 20px;
+}
 
-    button:hover {
-  background-color: lightseagreen;
-  cursor: pointer;
-  font-size: 20px;
-    }
+.title-section-button:hover {
+    background-color: red;
+    cursor: pointer;
+    font-size: 20px;
+}
 
-    #title {
-        text-align: center;
-        padding-top: 200px;
-        background-image: url('../images/football.jpg');
-        background-position: center top;
-    }
