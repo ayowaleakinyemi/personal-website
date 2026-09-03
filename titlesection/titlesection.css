@@ -11,4 +11,6 @@
     #title {
         text-align: center;
         padding-top: 200px;
+        background-image: url('../images/football.jpg');
+        background-position: center top;
     }
