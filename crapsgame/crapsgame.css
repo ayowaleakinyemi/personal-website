@@ -49,3 +49,13 @@
 #craps-main-section {
     display: none;
 }
+
+.craps-main-section-stats {
+    text-align: center;
+    margin: 100px 0 0 0;
+}
+
+#craps-stats-money-container {
+    font-size: 50px;
+    margin: 25px 0 5px 0;
+}
