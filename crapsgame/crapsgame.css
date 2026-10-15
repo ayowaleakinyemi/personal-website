@@ -31,6 +31,23 @@
     position: relative;
 }
 
+.live-badge{
+    background-color: rgba(255, 0, 0, 0.4);
+    color: white;
+    padding: calc(var(--height-scale) * 0.01);
+    font-size: calc(var(--height-scale) * 0.03);
+    position: absolute;
+    top: calc(var(--height-scale) * 0.04);
+    right: calc(var(--height-scale) * 0.02);
+    animation: blink 0.35s infinite;
+}
+
+@keyframes blink {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.35; }
+    100% { opacity: 1; }
+}
+
 #craps-registration-pane {
     text-align: center;
     margin-top: calc(var(--height-scale) * 0.15);
@@ -41,7 +58,7 @@
     background: none;
     border: none;
     border-bottom: solid white 1px;
-    margin: calc(var(--height-scale * 0.055)) 0;
+    margin: calc(var(--height-scale) * 0.055) 0;
     color: white;
     text-align: center;
     font-size: calc(var(--game-title-size) * 0.5);
