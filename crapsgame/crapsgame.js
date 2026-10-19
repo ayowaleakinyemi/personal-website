@@ -46,6 +46,11 @@ function registerCrapsPlayer () {
     }
 }
 
+function showRegistrationPane () {
+    document.getElementById(crapsRegistrationPane).style.display = "block"
+}
+
+
 function removeRegistrationPane () {
     document.getElementById(crapsRegistrationPane).style.display = "none"
 }
@@ -54,10 +59,18 @@ function showMainGameSection () {
     document.getElementById(crapsMainSection).style.display = "block"
 }
 
+function hideMainGameSection () {
+    document.getElementById(crapsMainSection).style.display = "none"
+}
+
 function setupFirstRound () {
+    document.getElementById(crapsRollDiceAnimationContainer).style.display = "none"
     document.getElementById(crapsRoundFinishGridContainer).style.display = "none"
+    document.getElementById(crapsRollDiceButton).style.display = "block"
+    document.getElementById(crapsBettingGridContainer).style.display = "block"
     document.getElementById(crapsStatsUsername).innerHTML = crapsUsername
-    setMoney (currentMoney)
+    canChangeBet = true
+    setMoney (startingMoney)
     setRounds (startingRounds)
     betEven()
     setBetAmount(minimumBet)
@@ -106,7 +119,9 @@ function setBetAmount (betAmount) {
 }
 
 function rollDice () {
+    canChangeBet = false
     formatDiceScale()
+    document.getElementById(crapsRollDiceAnimationContainer).style.display = "block";
     document.getElementById(crapsRollDiceButton).style.display = "none";
     const diceRollElement = document.getElementById(crapsRollDiceAnimationContainer)
     rollADie({ element: diceRollElement, numberOfDice: 2, callback: delayedProcessDiceResult, delay: 100000000000 });
@@ -148,3 +163,10 @@ function processDiceResult (diceResult) {
     document.getElementById(crapsRoundFinishGridContainer).style.display = "block"
     document.getElementById(crapsRoundFinishMessage).innerHTML = roundFinishMessage
 }
+
+function exitGame() {
+    alert("After playing " + currentRounds + " rounds, you leave with " + currentMoney + "$")
+    hideMainGameSection()
+    showRegistrationPane()
+    document.getElementById(crapsUsernameInput).value = ""
+}   
